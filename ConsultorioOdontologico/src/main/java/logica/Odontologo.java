@@ -3,9 +3,8 @@ package logica;
 import java.util.Date;
 import java.util.List;
 
+public class Odontologo extends Persona {
 
-public class Odontologo extends Persona{
-    
     private int id_odontologo;
     private String especialidad;
     private List<Turno> turnos;
@@ -63,8 +62,5 @@ public class Odontologo extends Persona{
     public void setUnHorario(Horario unHorario) {
         this.unHorario = unHorario;
     }
-    
-    
-    
-    
+
 }

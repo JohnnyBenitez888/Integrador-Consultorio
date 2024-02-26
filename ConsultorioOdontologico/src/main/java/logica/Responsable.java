@@ -2,8 +2,8 @@ package logica;
 
 import java.util.Date;
 
-public class Responsable extends Persona{
-    
+public class Responsable extends Persona {
+
     private int id_responsable;
     private String tipo_resp;
 
@@ -31,7 +31,5 @@ public class Responsable extends Persona{
     public void setTipo_resp(String tipo_resp) {
         this.tipo_resp = tipo_resp;
     }
-        
 
-    
 }

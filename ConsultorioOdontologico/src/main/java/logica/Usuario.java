@@ -1,8 +1,7 @@
 package logica;
 
-
 public class Usuario {
-    
+
     private int id_user;
     private String nombre_user;
     private String contrasenia;
@@ -55,9 +54,5 @@ public class Usuario {
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
-    
-    
-    
-    
+
 }
