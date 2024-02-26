@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package persistencia;
 
 import java.io.Serializable;
@@ -10,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Odontologo;
@@ -26,6 +23,11 @@ public class TurnoJpaController implements Serializable {
     public TurnoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+
+    public TurnoJpaController() {
+        this.emf = Persistence.createEntityManagerFactory("ClinicaPU");
+    }
+
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
@@ -192,5 +194,5 @@ public class TurnoJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }

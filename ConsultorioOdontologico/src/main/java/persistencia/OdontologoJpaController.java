@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package persistencia;
 
 import java.io.Serializable;
@@ -14,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import logica.Odontologo;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -26,6 +23,11 @@ public class OdontologoJpaController implements Serializable {
     public OdontologoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+
+    public OdontologoJpaController() {
+        this.emf = Persistence.createEntityManagerFactory("ClinicaPU");
+    }
+
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
@@ -185,5 +187,5 @@ public class OdontologoJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }
