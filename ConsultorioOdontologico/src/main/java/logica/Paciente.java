@@ -7,14 +7,14 @@ public class Paciente extends Persona {
 
     private int id_paciente;
     private boolean tiene_OS;
-    private TipoSangre tipoSangre;
+    private String tipoSangre;
     private Responsable responsable;
     private List<Turno> turnos;
 
     public Paciente() {
     }
 
-    public Paciente(int id_paciente, boolean tiene_OS, TipoSangre tipoSangre, Responsable responsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Paciente(int id_paciente, boolean tiene_OS, String tipoSangre, Responsable responsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
         super(dni, nombre, apellido, telefono, direccion, fecha_nac);
         this.id_paciente = id_paciente;
         this.tiene_OS = tiene_OS;
@@ -39,11 +39,11 @@ public class Paciente extends Persona {
         this.tiene_OS = tiene_OS;
     }
 
-    public TipoSangre getTipoSangre() {
+    public String getTipoSangre() {
         return tipoSangre;
     }
 
-    public void setTipoSangre(TipoSangre tipoSangre) {
+    public void setTipoSangre(String tipoSangre) {
         this.tipoSangre = tipoSangre;
     }
 

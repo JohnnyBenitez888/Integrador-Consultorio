@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package logica;
 
-/**
- *
- * @author Johnny
- */
+import java.util.Date;
+
+
 public class Turno {
+    
+    private int id_turno;
+    private Date fecha_turno;
+    private String hora_turno;
     
 }
