@@ -2,11 +2,13 @@ package logica;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Secretario extends Persona {
 
     private String sector;
+    @OneToOne
     private Usuario unUsuario;
 
     public Secretario() {

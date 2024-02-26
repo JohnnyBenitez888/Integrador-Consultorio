@@ -3,13 +3,18 @@ package logica;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Odontologo extends Persona {
 
     private String especialidad;
-    private List<Turno> turnos;
+    @OneToMany(mappedBy = "odonto")
+    private List<Turno> turnosOdon;
+    @OneToOne
     private Usuario unUsuario;
+    @OneToOne
     private Horario unHorario;
 
     public Odontologo() {
@@ -18,7 +23,7 @@ public class Odontologo extends Persona {
     public Odontologo(String especialidad, List<Turno> turnos, Usuario unUsuario, Horario unHorario, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
         super(dni, nombre, apellido, telefono, direccion, fecha_nac);
         this.especialidad = especialidad;
-        this.turnos = turnos;
+        this.turnosOdon = turnos;
         this.unUsuario = unUsuario;
         this.unHorario = unHorario;
     }
@@ -31,12 +36,12 @@ public class Odontologo extends Persona {
         this.especialidad = especialidad;
     }
 
-    public List<Turno> getTurnos() {
-        return turnos;
+    public List<Turno> getTurnosOdon() {
+        return turnosOdon;
     }
 
-    public void setTurnos(List<Turno> turnos) {
-        this.turnos = turnos;
+    public void setTurnosOdon(List<Turno> turnosOdon) {
+        this.turnosOdon = turnosOdon;
     }
 
     public Usuario getUnUsuario() {

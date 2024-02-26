@@ -3,14 +3,18 @@ package logica;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Paciente extends Persona {
 
     private boolean tiene_OS;
     private String tipoSangre;
+    @OneToOne
     private Responsable responsable;
-    private List<Turno> turnos;
+    @OneToMany(mappedBy = "paciente")
+    private List<Turno> turnosPac;
 
     public Paciente() {
     }
@@ -20,7 +24,7 @@ public class Paciente extends Persona {
         this.tiene_OS = tiene_OS;
         this.tipoSangre = tipoSangre;
         this.responsable = responsable;
-        this.turnos = turnos;
+        this.turnosPac = turnos;
     }
 
     public boolean isTiene_OS() {
@@ -47,12 +51,12 @@ public class Paciente extends Persona {
         this.responsable = responsable;
     }
 
-    public List<Turno> getTurnos() {
-        return turnos;
+    public List<Turno> getTurnosPac() {
+        return turnosPac;
     }
 
-    public void setTurnos(List<Turno> turnos) {
-        this.turnos = turnos;
+    public void setTurnosPac(List<Turno> turnosPac) {
+        this.turnosPac = turnosPac;
     }
 
 }
