@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Consultorio Odontológico</title>
+    <title>Consultorio OdontolÃ³gico</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Consultorio Odontológico</div>
+                <div class="sidebar-brand-text mx-3">Consultorio OdontolÃ³gico</div>
             </a>
 
             <!-- Divider -->
