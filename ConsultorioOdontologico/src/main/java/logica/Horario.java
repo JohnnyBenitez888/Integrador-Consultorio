@@ -1,8 +1,7 @@
 package logica;
 
-
 public class Horario {
-    
+
     private int id_horario;
     private String hora_inicio;
     private String hora_fin;
@@ -44,7 +43,5 @@ public class Horario {
     public void setHora_fin(String hora_fin) {
         this.hora_fin = hora_fin;
     }
-    
-    
-    
+
 }
