@@ -1,6 +1,7 @@
 package logica;
 
 import java.util.Date;
+import java.util.List;
 
 public class Paciente extends Persona {
 
@@ -8,18 +9,18 @@ public class Paciente extends Persona {
     private boolean tiene_OS;
     private TipoSangre tipoSangre;
     private Responsable responsable;
-    private Turno turno;
+    private List<Turno> turnos;
 
     public Paciente() {
     }
 
-    public Paciente(int id_paciente, boolean tiene_OS, TipoSangre tipoSangre, Responsable responsable, Turno turno, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
+    public Paciente(int id_paciente, boolean tiene_OS, TipoSangre tipoSangre, Responsable responsable, List<Turno> turnos, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
         super(dni, nombre, apellido, telefono, direccion, fecha_nac);
         this.id_paciente = id_paciente;
         this.tiene_OS = tiene_OS;
         this.tipoSangre = tipoSangre;
         this.responsable = responsable;
-        this.turno = turno;
+        this.turnos = turnos;
     }
 
     public int getId_paciente() {
@@ -54,12 +55,12 @@ public class Paciente extends Persona {
         this.responsable = responsable;
     }
 
-    public Turno getTurno() {
-        return turno;
+    public List<Turno> getTurnos() {
+        return turnos;
     }
 
-    public void setTurno(Turno turno) {
-        this.turno = turno;
+    public void setTurnos(List<Turno> turnos) {
+        this.turnos = turnos;
     }
 
 }
