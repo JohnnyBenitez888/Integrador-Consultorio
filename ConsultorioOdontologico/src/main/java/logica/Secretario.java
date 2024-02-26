@@ -1,7 +1,9 @@
 package logica;
 
 import java.util.Date;
+import javax.persistence.Entity;
 
+@Entity
 public class Secretario extends Persona {
 
     private String sector;

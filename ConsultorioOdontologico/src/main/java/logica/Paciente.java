@@ -2,7 +2,9 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 
+@Entity
 public class Paciente extends Persona {
 
     private boolean tiene_OS;

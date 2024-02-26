@@ -1,7 +1,9 @@
 package logica;
 
 import java.util.Date;
+import javax.persistence.Entity;
 
+@Entity
 public class Responsable extends Persona {
 
     private String tipo_resp;
