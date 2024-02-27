@@ -82,7 +82,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Acciones:</h6>
                             <a class="collapse-item" href="">Ver Usuarios</a>
-                            <a class="collapse-item" href="">Altas Usuarios</a>
+                            <a class="collapse-item" href="altaUsuarios.jsp">Altas Usuarios</a>
                         </div>
                     </div>
                 </li>
