@@ -18,36 +18,30 @@ import logica.Usuario;
 public class SvUsuario extends HttpServlet {
 
     Controladora control = new Controladora();
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-        
+
     }
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String name = request.getParameter("user");
         String contra = request.getParameter("contrasenia");
         String rol = request.getParameter("Rol");
-        System.out.println(name+"  "+contra+"  "+rol);
-        control.crearUsuario(name,contra,rol);
+        control.crearUsuario(name, contra, rol);
         response.sendRedirect("altaUsuarios.jsp");
-        
+
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -23,7 +23,7 @@
             </select>
         </div>
     </div>
-    
+
     <button class="btn btn-primary btn-user btn-block" type="submit">Crearar Usuario</button>
     <hr>
 </form>
