@@ -5,8 +5,9 @@
     <!---->
     <%@ include file="components/header.jsp"%>
     <%@ include file="components/bodyInicio.jsp"%>
+    
     <form action="SvUsuario" method="GET">
-        <button type="submit">Mostrar Usuarios</button>
+        <button class="btn btn-primary btn-user "type="submit">Mostrar Usuarios</button>
     </form>
 
     <div class="card shadow mb-4">
