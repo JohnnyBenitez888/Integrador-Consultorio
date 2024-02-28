@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.Controladora;
+import logica.Usuario;
 
 /**
  *
@@ -15,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "SvUsuario", urlPatterns = {"/SvUsuario"})
 public class SvUsuario extends HttpServlet {
 
+    Controladora control = new Controladora();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,7 +38,11 @@ public class SvUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+        String name = request.getParameter("user");
+        String contra = request.getParameter("contrasenia");
+        String rol = request.getParameter("rol");
+        control.crearUsuario(name,contra,rol);
+        response.sendRedirect("altaUsuarios.jsp");
         
     }
 
