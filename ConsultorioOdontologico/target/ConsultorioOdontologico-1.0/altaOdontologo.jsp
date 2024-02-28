@@ -39,7 +39,7 @@
                 <option value="endodoncia">Endodoncia</option>
                 <option value="odonEste">Odontología Estética</option>
                 <option value="ortodoncia">Ortodoncia</option>
-                <option value="odonpedia">Odontopediatría</option>PERIODONCIA,PROSTODONCIA_Y_REHABILITACION_ORAL
+                <option value="odonpedia">Odontopediatría</option>
                 <option value="patobucal">Patología Bucal</option>
                 <option value="perio">Periodoncia</option>
                 <option value="prosto">Prostodoncia y Rehabilitación Oral</option>
