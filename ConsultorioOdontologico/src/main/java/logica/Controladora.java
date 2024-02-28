@@ -1,5 +1,6 @@
 package logica;
 
+import java.util.List;
 import persistencia.ControladoraPersistencia;
 
 public class Controladora {
@@ -11,6 +12,10 @@ public class Controladora {
         Usuario user = new Usuario(nombre_user, contrasenia, rol);
         persis.crearUsuario(user);
         
+    }
+
+    public List<Usuario> listarUsuarios() {
+        return persis.listarUsuarios();
     }
     
     

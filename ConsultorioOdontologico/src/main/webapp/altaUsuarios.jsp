@@ -8,15 +8,15 @@
 <form action="SvUsuario" method="POST" class="user" >
     <div class="form-group row">
         <div class="col-sm-4 mb-3 mb-sm-0">
-            <input type="text" class="form-control form-control" name="user"
+            <input type="text" class="form-control" name="user"
                    placeholder="Nombre Usuario">
         </div>
         <div class="col-sm-4">
-            <input type="password" class="form-control " name="contrasenia"
+            <input type="password" class="form-control" name="contrasenia"
                    placeholder="Contraseña">
         </div>
         <div class="col-sm-4">
-            <select class="form-control " id="rol" aria-label="default select example" name="Rol">
+            <select class="form-control" id="rol" aria-label="default select example" name="Rol">
                 <option value="" disabled selected>Rol</option>
                 <option value="Odontologo/a">Odontólogo/a</option>
                 <option value="Secretario/a">Secretario/a</option>
