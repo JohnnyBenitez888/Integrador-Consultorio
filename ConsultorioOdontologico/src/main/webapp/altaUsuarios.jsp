@@ -5,7 +5,7 @@
 <h1>Alta Usuarios</h1>
 <p>...</p>
 
-<form class="user">
+<form class="user" action="SvUsuario" method="POST">
     <div class="form-group row">
         <div class="col-sm-4 mb-3 mb-sm-0">
             <input type="text" class="form-control form-control" id="user"
