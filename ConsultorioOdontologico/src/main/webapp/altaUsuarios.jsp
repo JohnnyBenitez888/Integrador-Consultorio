@@ -5,27 +5,26 @@
 <h1>Alta Usuarios</h1>
 <p>...</p>
 
-<form class="user" action="SvUsuario" method="POST">
+<form action="SvUsuario" method="POST" class="user" >
     <div class="form-group row">
         <div class="col-sm-4 mb-3 mb-sm-0">
-            <input type="text" class="form-control form-control" id="user"
+            <input type="text" class="form-control form-control" name="user"
                    placeholder="Nombre Usuario">
         </div>
         <div class="col-sm-4">
-            <input type="password" class="form-control " id="contrasenia"
+            <input type="password" class="form-control " name="contrasenia"
                    placeholder="Contraseña">
         </div>
         <div class="col-sm-4">
             <select class="form-control " id="rol" aria-label="default select example" name="Rol">
                 <option value="" disabled selected>Rol</option>
-                <option value="odonto">Odontólogo/a</option>
-                <option value="secre">Secretario/a</option>
+                <option value="Odontologo/a">Odontólogo/a</option>
+                <option value="Secretario/a">Secretario/a</option>
             </select>
         </div>
     </div>
-    <a href="" class="btn btn-primary btn-user btn-block">
-        Crear Usuario
-    </a>
+    
+    <button class="btn btn-primary btn-user btn-block" type="submit">Crearar Usuario</button>
     <hr>
 </form>
 

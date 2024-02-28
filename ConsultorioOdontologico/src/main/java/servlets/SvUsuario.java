@@ -40,7 +40,8 @@ public class SvUsuario extends HttpServlet {
         
         String name = request.getParameter("user");
         String contra = request.getParameter("contrasenia");
-        String rol = request.getParameter("rol");
+        String rol = request.getParameter("Rol");
+        System.out.println(name+"  "+contra+"  "+rol);
         control.crearUsuario(name,contra,rol);
         response.sendRedirect("altaUsuarios.jsp");
         
