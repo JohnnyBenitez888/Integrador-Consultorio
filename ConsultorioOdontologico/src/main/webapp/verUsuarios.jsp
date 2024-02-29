@@ -5,11 +5,12 @@
     <!---->
     <%@ include file="components/header.jsp"%>
     <%@ include file="components/bodyInicio.jsp"%>
-    
+    <!--Boton-->
     <form action="SvUsuario" method="GET">
         <button class="btn btn-primary btn-user "type="submit">Mostrar Usuarios</button>
     </form>
 
+    <!--Tabla-->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
