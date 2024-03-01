@@ -5,11 +5,10 @@
     <!---->
     <%@ include file="components/header.jsp"%>
     <%@ include file="components/bodyInicio.jsp"%>
-    <h2>Ver Usuarios</h2>
-    <!--Boton-->
-    <form action="SvUsuario" method="GET">
+    <!--Boton<form action="SvUsuario" method="GET">
         <button class="btn btn-primary btn-user "type="submit">Mostrar Usuarios</button>
-    </form>
+    </form>-->
+    
 
     <!--Tabla-->
     <h1 class="h3 mb-2 text-gray-800">Lista de Usuarios</h1>
@@ -26,6 +25,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
+                                <th>Id Usuario</th>
                                 <th>Nombre</th>
                                 <th>Contraseña</th>
                                 <th>Rol</th>
@@ -37,6 +37,7 @@
                         %>
                         <tbody>
                             <tr>
+                                <td><%=user.getId_user()%></td>
                                 <td><%=user.getNombre_user()%></td>
                                 <td><%=user.getContrasenia()%></td>
                                 <td><%=user.getRol()%></td>
