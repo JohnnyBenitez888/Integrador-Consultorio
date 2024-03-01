@@ -5,6 +5,7 @@
     <!---->
     <%@ include file="components/header.jsp"%>
     <%@ include file="components/bodyInicio.jsp"%>
+    <h2>Ver Usuarios</h2>
     <!--Boton-->
     <form action="SvUsuario" method="GET">
         <button class="btn btn-primary btn-user "type="submit">Mostrar Usuarios</button>
@@ -43,5 +44,6 @@
         </div>
     </div>
     <br>
-
+    
+    
     <%@ include file="components/bodyFinal.jsp"%>
