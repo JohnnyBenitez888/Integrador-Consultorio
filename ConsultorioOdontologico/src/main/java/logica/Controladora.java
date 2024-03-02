@@ -17,6 +17,12 @@ public class Controladora {
     public List<Usuario> listarUsuarios() {
         return persis.listarUsuarios();
     }
+
+    public void eliminarUsuario(int id) {
+        persis.eliminarUsuario(id);
+    }
     
-    
+    public void editarUsuario(Usuario user){
+        persis.editarUsuario(user);
+    }
 }

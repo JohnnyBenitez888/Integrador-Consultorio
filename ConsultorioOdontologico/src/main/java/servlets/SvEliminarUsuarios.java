@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.Controladora;
 
 /**
  *
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "SvEliminarUsuarios", urlPatterns = {"/SvEliminarUsuarios"})
 public class SvEliminarUsuarios extends HttpServlet {
 
+    Controladora control = new Controladora();
   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -34,7 +36,9 @@ public class SvEliminarUsuarios extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+        int id = Integer.parseInt(request.getParameter("id"));
+        control.eliminarUsuario(id);
+        response.sendRedirect("verUsuarios.jsp");
     }
 
     
