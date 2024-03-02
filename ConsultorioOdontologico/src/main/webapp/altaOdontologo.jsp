@@ -48,6 +48,23 @@
 
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="text" class="form-control "
+                   id="fechaNac" placeholder="Fecha de Nacimiento">
+        </div>
+        <div class="col-sm-6">
+            <select class="form-control " id="turno" aria-label="default select example" name="turno">
+                <option value="" disabled selected>Turnos</option>
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+                <option value="rotativo">Rotativo</option>
+                
+            </select>
+
+        </div>
+    </div>
 
     <a href="" class="btn btn-primary btn-user btn-block">
         Crear Odontólogo
