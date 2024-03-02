@@ -3,7 +3,7 @@
 <%@ include file="components/bodyInicio.jsp"%>
 
 <h1>Alta Usuarios</h1>
-<p>...</p>
+<p>A continuación podrá crear un usuario.</p>
 
 <form action="SvUsuario" method="POST" class="user" >
     <div class="form-group row">

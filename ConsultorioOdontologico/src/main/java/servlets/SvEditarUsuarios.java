@@ -39,14 +39,18 @@ public class SvEditarUsuarios extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        Usuario user = (Usuario) request.getSession().getAttribute("user");
         String name = request.getParameter("user");
         String contra = request.getParameter("contrasenia");
-        String rol = request.getParameter("Rol");
-        int id = Integer.parseInt(request.getParameter("id"));
-        Usuario user = new Usuario(id, name, contra, rol);
+        String rol = user.getRol();
+        if (request.getParameter("Rol") != null) {
+            rol = request.getParameter("Rol");
+        }
+        user.setNombre_user(name);
+        user.setContrasenia(contra);
+        user.setRol(rol);
         control.editarUsuario(user);
-        response.sendRedirect("verUsuarios.jsp");
+        response.sendRedirect("SvUsuario");
     }
 
     @Override

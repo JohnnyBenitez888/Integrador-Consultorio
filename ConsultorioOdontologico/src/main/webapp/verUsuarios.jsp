@@ -29,7 +29,6 @@
                             <th>Nombre</th>
                             <th>Rol</th>
                             <th style="width: 210px">Acción</th>
-
                         </tr>
                     </thead>
                     <%
@@ -38,25 +37,35 @@
                     %>
                     <tbody>
                         <tr>
+                            <!-- Cargamos las filas con los datos de los usuarios -->
                             <td id="id_usu<%=user.getId_user()%>"><%=user.getId_user()%></td>
                             <td><%=user.getNombre_user()%></td>
                             <td><%=user.getRol()%></td>
                             <th style="display: flex; width: 230px;">
-                                <form name="eliminar" action="SvEliminarUsuarios" method="POST">
+                                <!-- Eliminamos el usuario llamando al servlet SvEliminarUsuarios con el método POST -->
+                                <form name="eliminar" action="SvEliminarUsuarios" method="POST" onsubmit="return confirmarEliminar()">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                             style="background-color:red; margin-right: 5px;">
                                         <i class="fas fa-trash-alt"></i> Eliminar </button>
-                                    <input type="hidden" name="id" value="<%=user.getId_user()%>">   
+                                    <input type="hidden" name="id" value="<%=user.getId_user()%>">  
+                                    <!-- UTILIZAMOS JAVASCRIPT -->
+                                    <script> 
+                                        function confirmarEliminar() {
+                                            // Mostrar un cuadro de diálogo de confirmación
+                                            var confirmacion = confirm("¿Estás seguro que deseas eliminar este usuario?");
+                                            return confirmacion;
+                                        }
+                                    </script>
                                 </form>
+                                    <!-- Llamamos al servlet SvEditarUsaurios -->
                                 <form name="editar" action="SvEditarUsuarios" method="GET">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                             style="margin-left: 5px;">
                                         <i class="fas fa-pencil-alt"></i> Editar </button>
-                                        <input type="hidden" name="id" value="<%=user.getId_user()%>">   
+                                    <input type="hidden" name="id" value="<%=user.getId_user()%>">   
                                 </form> </th>
                                 <% }%>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
