@@ -31,12 +31,12 @@ public class SvUsuario extends HttpServlet {
             throws ServletException, IOException {
 
         List<Usuario> listaUsuarios = control.listarUsuarios();
-        
+
         HttpSession miSesion = request.getSession();//Traemos la session del usuario
         miSesion.setAttribute("listaUsuarios", listaUsuarios);
-        
+
         response.sendRedirect("verUsuarios.jsp");
-        
+
     }
 
     @Override

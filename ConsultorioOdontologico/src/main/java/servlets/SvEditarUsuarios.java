@@ -44,7 +44,7 @@ public class SvEditarUsuarios extends HttpServlet {
         String contra = request.getParameter("contrasenia");
         String rol = request.getParameter("Rol");
         int id = Integer.parseInt(request.getParameter("id"));
-        Usuario user = new Usuario(id,name,contra,rol);
+        Usuario user = new Usuario(id, name, contra, rol);
         control.editarUsuario(user);
         response.sendRedirect("verUsuarios.jsp");
     }

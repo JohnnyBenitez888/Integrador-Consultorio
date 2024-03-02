@@ -52,7 +52,7 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                             style="margin-left: 5px;">
                                         <i class="fas fa-pencil-alt"></i> Editar </button>
-                                    <input type="hidden" name="id" value="<%=user.getId_user()%>">   
+                                        <input type="hidden" name="id" value="<%=user.getId_user()%>">   
                                 </form> </th>
                                 <% }%>
                         </tr>
