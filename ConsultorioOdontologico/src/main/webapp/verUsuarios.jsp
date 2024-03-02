@@ -48,7 +48,7 @@
                                         <i class="fas fa-trash-alt"></i> Eliminar </button>
                                     <input type="hidden" name="id" value="<%=user.getId_user()%>">   
                                 </form>
-                                <form name="editar" action="SvEditarUsuarios" method="POST">
+                                <form name="editar" action="SvEditarUsuarios" method="GET">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                             style="margin-left: 5px;">
                                         <i class="fas fa-pencil-alt"></i> Editar </button>

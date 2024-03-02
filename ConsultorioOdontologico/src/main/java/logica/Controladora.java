@@ -25,4 +25,8 @@ public class Controladora {
     public void editarUsuario(Usuario user){
         persis.editarUsuario(user);
     }
+
+    public Usuario traerUsuario(int id) {
+        return persis.traerUsuario(id);
+    }
 }

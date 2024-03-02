@@ -39,4 +39,8 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public Usuario traerUsuario(int id) {
+        return userJpa.findUsuario(id);
+    }
 }
