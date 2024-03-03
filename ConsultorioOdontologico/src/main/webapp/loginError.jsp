@@ -45,7 +45,7 @@
                                             <h2>Usuario o Contraseña incorrecto</h2>
                                         </div>
                                         <form class="user" action="SvLogin" method="GET">
-                                           
+
                                             <button class="btn btn-primary btn-user btn-block" type="submit">
                                                 Intentar de Nuevo
                                             </button>

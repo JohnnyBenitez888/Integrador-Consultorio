@@ -6,15 +6,15 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body id="page-top">
-    
+
     <%  HttpSession mySession = request.getSession();
         String userName = (String) request.getSession().getAttribute("userLogin");
-        if(userName==null){
-        response.sendRedirect("error.jsp");
+        if (userName == null) {
+            response.sendRedirect("error.jsp");
         }
     %>
-    
-    
+
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 

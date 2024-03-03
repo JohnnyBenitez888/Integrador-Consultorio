@@ -49,7 +49,7 @@
                                             <h2>Primero tienes que Iniciar Sesión</h2>
                                         </div>
                                         <form class="user" action="SvLogin" method="GET">
-                                           
+
                                             <button class="btn btn-primary btn-user btn-block" type="submit">
                                                 Iniciar Sesión
                                             </button>
