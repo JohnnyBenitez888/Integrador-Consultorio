@@ -1,3 +1,8 @@
+<%-- 
+    Document   : error
+    Created on : 2 mar. 2024, 23:49:15
+    Author     : Johnny
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,13 +46,12 @@
                                 <div class="col-lg-6">
                                     <div class="p-5">
                                         <div class="text-center">
-                                            <h1 class="h4 text-gray-900 mb-4">ERROR AL INGRESAR</h1>
-                                            <h2>Usuario o Contraseña incorrecto</h2>
+                                            <h2>Primero tienes que Iniciar Sesión</h2>
                                         </div>
                                         <form class="user" action="SvLogin" method="GET">
                                            
                                             <button class="btn btn-primary btn-user btn-block" type="submit">
-                                                Intentar de Nuevo
+                                                Iniciar Sesión
                                             </button>
                                             <hr>
                                         </form>

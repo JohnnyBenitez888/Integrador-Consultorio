@@ -24,7 +24,7 @@ public class SvLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        response.sendRedirect("login.jsp");
     }
 
     @Override
@@ -41,7 +41,7 @@ public class SvLogin extends HttpServlet {
             HttpSession session = request.getSession(true);
             session.setAttribute("userLogin", name);
             response.sendRedirect("index.jsp");
-        }else{
+        } else {
             response.sendRedirect("loginError.jsp");
         }
 

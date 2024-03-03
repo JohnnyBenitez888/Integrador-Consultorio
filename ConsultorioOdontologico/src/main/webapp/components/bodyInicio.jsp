@@ -6,7 +6,15 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body id="page-top">
-
+    
+    <%  HttpSession mySession = request.getSession();
+        String userName = (String) request.getSession().getAttribute("userLogin");
+        if(userName==null){
+        response.sendRedirect("error.jsp");
+        }
+    %>
+    
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -18,7 +26,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-regular fa-tooth"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Consultorio Odontológico</div>
+                <div class="sidebar-brand-text mx-3">Consultorio Odontológico Los Simons</div>
             </a>
 
             <!-- Divider -->
@@ -123,7 +131,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=userName%></span>
                                 <img class="img-profile rounded-circle"
                                      src="img/undraw_profile.svg">
                             </a>
