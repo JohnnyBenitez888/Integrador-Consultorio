@@ -29,4 +29,15 @@ public class Controladora {
     public Usuario traerUsuario(int id) {
         return persis.traerUsuario(id);
     }
+
+    public boolean validarUser(String name, String contra) {
+        List<Usuario> listaUsuarios = persis.listarUsuarios();
+
+        for (Usuario u : listaUsuarios) {
+            if (u.getNombre_user().equals(name) && u.getContrasenia().equals(contra)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
