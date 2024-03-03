@@ -41,6 +41,8 @@ public class SvLogin extends HttpServlet {
             HttpSession session = request.getSession(true);
             session.setAttribute("userLogin", name);
             response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("loginError.jsp");
         }
 
     }

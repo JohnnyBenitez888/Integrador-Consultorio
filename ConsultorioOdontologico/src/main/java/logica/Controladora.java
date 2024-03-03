@@ -31,13 +31,14 @@ public class Controladora {
     }
 
     public boolean validarUser(String name, String contra) {
+        boolean valido = false;
         List<Usuario> listaUsuarios = persis.listarUsuarios();
 
         for (Usuario u : listaUsuarios) {
             if (u.getNombre_user().equals(name) && u.getContrasenia().equals(contra)) {
-                return true;
+                valido = true;
             }
         }
-        return false;
+        return valido;
     }
 }
